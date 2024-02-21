@@ -18,15 +18,30 @@ const HeroBanner = () => {
       <Typography
         fontWeight={700}
         sx={{ fontSize: { lg: "44px", xs: "40px" } }}
+        mb="23px"
+        mt="30px"
       >
         No Nonsense <br /> Results!
       </Typography>
-      <Typography fontSize="22px" lineHeight="35px" mb={3}>
+      <Typography fontSize="22px" lineHeight="35px" mb={7}>
         Check out the most efficient way to achieve your goals
       </Typography>
-      <Button variant="contained" color="error" href="#exercises">
+      <Button
+        variant="contained"
+        color="error"
+        href="#exercises"
+        sx={{ backgroundColor: "#ff2625" }}
+      >
         Explore Exercises
       </Button>
+      <Typography
+        fontWeight="600"
+        color="#ff2625"
+        sx={{ opacity: 0.1, display: { lg: "block", xs: "none" } }}
+        fontSize="200px"
+      >
+        Exercise
+      </Typography>
       <img
         src={HeroBannerImage}
         alt="hero banner image"
