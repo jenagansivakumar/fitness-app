@@ -4,6 +4,13 @@ import { exerciseOptions, fetchData } from "../utils/fetchData";
 
 export default function SearchExercises() {
   const [search, setSearch] = useState("");
+  const [exercises, setExercises] = useState([]);
+
+  useEffect(() => {
+    const fetchExercisesData = async () => {
+      const bodyPartsData = await fetchData;
+    };
+  }, []);
 
   const handleSearch = async () => {
     if (search) {
@@ -11,9 +18,17 @@ export default function SearchExercises() {
         "https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises",
         exerciseOptions
       );
-      const searchExercises = exerciseData.filter((exercise) =>
-        exercise.name.toLowerCase().includes(search)
+      const searchedExercises = exerciseData.filter(
+        (exercise) =>
+          exercise.name.toLowerCase().includes(search) ||
+          exercise.name.toLowerCase().includes(search) ||
+          exercise.type.toLowerCase().includes(search) ||
+          exercise.muscle.toLowerCase().includes(search) ||
+          exercise.equipment.toLowerCase().includes(search) ||
+          exercise.difficulty.toLowerCase().includes(search)
       );
+      setSearch("");
+      setExercises(searchedExercises);
     }
   };
   return (
