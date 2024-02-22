@@ -8,10 +8,12 @@ export default function SearchExercises() {
   const handleSearch = async () => {
     if (search) {
       const exercisesData = await fetchData(
-        "https://exerciseapi3.p.rapidapi.com/exercise/name/push%20up",
+        "https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises",
         exerciseOptions
       );
-      console.log(exercisesData);
+      const searchExercises = exerciseData.filter((exercise) =>
+        exercise.name.toLowerCase().includes(search)
+      );
     }
   };
   return (
