@@ -36,6 +36,7 @@ export default function SearchExercises() {
             fontSize: { lg: "20px", xs: "12px" },
             height: "56px",
             position: "absolute",
+            right: "0",
           }}
         >
           Search
