@@ -8,7 +8,10 @@ export default function SearchExercises() {
 
   useEffect(() => {
     const fetchExercisesData = async () => {
-      const bodyPartsData = await fetchData;
+      const bodyPartsData = await fetchData(
+        "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
+        exerciseOptions
+      );
     };
   }, []);
 
@@ -18,14 +21,13 @@ export default function SearchExercises() {
         "https://exercisedb.p.rapidapi.com/exercises",
         exerciseOptions
       );
+      console.log(exercisesData);
       const searchedExercises = exerciseData.filter(
         (exercise) =>
           exercise.name.toLowerCase().includes(search) ||
-          exercise.name.toLowerCase().includes(search) ||
-          exercise.type.toLowerCase().includes(search) ||
-          exercise.muscle.toLowerCase().includes(search) ||
-          exercise.equipment.toLowerCase().includes(search) ||
-          exercise.difficulty.toLowerCase().includes(search)
+          exercise.target.toLowerCase().includes(search) ||
+          exercise.bodyPart.toLowerCase().includes(search) ||
+          exercise.equipment.toLowerCase().includes(search)
       );
       setSearch("");
       setExercises(searchedExercises);
