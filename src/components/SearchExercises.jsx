@@ -15,7 +15,7 @@ export default function SearchExercises() {
   const handleSearch = async () => {
     if (search) {
       const exercisesData = await fetchData(
-        "https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises",
+        "https://exercisedb.p.rapidapi.com/exercises",
         exerciseOptions
       );
       const searchedExercises = exerciseData.filter(
