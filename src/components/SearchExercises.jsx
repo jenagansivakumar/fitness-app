@@ -9,7 +9,6 @@ export default function SearchExercises({
   setBodyPart,
 }) {
   const [search, setSearch] = useState("");
-  const [exercises, setExercises] = useState([]);
   const [bodyParts, setBodyParts] = useState([]);
 
   useEffect(() => {
