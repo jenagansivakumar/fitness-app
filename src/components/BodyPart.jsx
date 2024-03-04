@@ -6,7 +6,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
   return (
     <Stack
       type="button"
-      alignItems={"center"}
+      alignItems="center"
       className="bodyPart-card"
       sx={{
         borderTop: bodyPart === item ? "4px solid #ff2625" : "",
@@ -19,6 +19,8 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
       }}
     >
       <img src={Icon} alt="dumbell" style={{ width: "40px", height: "40px" }} />
+      <Typography fontSize="24px" fontWeight="bold" color="#3A1212" textTransform="capitalize"> {item}</Typography>
+  
     </Stack>
   );
 };
