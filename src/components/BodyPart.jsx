@@ -20,6 +20,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
       }}
       onclick={() => {
         setBodyPart(item)
+        window.scrollTo({top: 1800, left: 100, behavior: "smooth"})
       }}
     >
       <img src={Icon} alt="dumbell" style={{ width: "40px", height: "40px" }} />
