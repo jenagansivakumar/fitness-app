@@ -4,7 +4,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
-  console.log(exercises);
+  console.log("exercises", exercises);
   return (
     <Box id="exercises" sx={{ mt: "110px" }} mt="50px" p="20px">
       <Typography variant="h3" mb="46px">

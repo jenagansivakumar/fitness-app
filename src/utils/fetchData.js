@@ -1,9 +1,11 @@
 export const exerciseOptions = {
-  method: "GET",
+  method: 'GET',
+  url: 'https://exercisedb.p.rapidapi.com/exercises',
+  params: {limit: '1000'},
   headers: {
-    "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
-    "X-RapidAPI-Key": import.meta.env.VITE_REACT_APP_RAPID_API_KEY,
-  },
+    'X-RapidAPI-Key': '5ef9910aaamsh1fed8d557437857p1e5874jsn75342e49ddda',
+    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+  }
 };
 
 export const youtubeOptions = {
