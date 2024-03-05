@@ -1,9 +1,9 @@
 export const exerciseOptions = {
   method: 'GET',
   url: 'https://exercisedb.p.rapidapi.com/exercises',
-  params: {limit: '1000'},
+  params: { limit: '1000' },
   headers: {
-    'X-RapidAPI-Key': '5ef9910aaamsh1fed8d557437857p1e5874jsn75342e49ddda',
+    'X-RapidAPI-Key': import.meta.env.VITE_REACT_APP_RAPID_API_KEY,
     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
   }
 };
@@ -17,7 +17,12 @@ export const youtubeOptions = {
 };
 
 export const fetchData = async (url, options) => {
-  const response = await fetch(url, options);
+  const queryString = Object.keys(options.params)
+    .map(key => `${key}=${options.params[key]}`)
+    .join('&');
+  const requestUrl = `${url}?${queryString}`;
+
+  const response = await fetch(requestUrl, options);
   const data = await response.json();
   return data;
 };
