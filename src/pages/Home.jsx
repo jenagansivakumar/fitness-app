@@ -7,6 +7,7 @@ import SearchExercises from "../components/SearchExercises";
 const Home = () => {
   const [bodyPart, setBodyPart] = useState("all");
   const [exercises, setExercises] = useState([]);
+  console.log("exercises", exercises);
   return (
     <Box>
       <HeroBanner />
@@ -17,8 +18,8 @@ const Home = () => {
       />
       <Exercises
         setExercises={setExercises}
+        exercises={exercises}
         bodyPart={bodyPart}
-        setBodyPart={setBodyPart}
       />
     </Box>
   );
