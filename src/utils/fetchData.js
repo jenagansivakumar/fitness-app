@@ -17,6 +17,11 @@ export const youtubeOptions = {
 };
 
 export const fetchData = async (url, options) => {
+  // Ensure that options is initialized to an empty object if it's not provided
+  options = options || {};
+  // Ensure that options.params is initialized to an empty object if it's not provided
+  options.params = options.params || {};
+
   const queryString = Object.keys(options.params)
     .map(key => `${key}=${options.params[key]}`)
     .join('&');
