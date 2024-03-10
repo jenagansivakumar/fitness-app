@@ -41,8 +41,8 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => (
       color="#3A1212"
       textTransform="capitalize"
     >
-      {" "}
-      {item}
+      {/* Access a specific property of the item object */}
+      <span>{item.name}</span>
     </Typography>
   </Stack>
 );
