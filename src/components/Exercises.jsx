@@ -32,8 +32,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         setExercises(exercisesData);
       } catch (error) {
         console.error('Error fetching exercises:', error);
-        // Optionally, display a message to the user indicating that the data is currently unavailable
-        // setExercises([]); // You might want to clear the existing data or set it to a default value
+       
       }
     };
   
