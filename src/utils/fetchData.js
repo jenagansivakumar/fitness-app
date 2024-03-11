@@ -16,18 +16,23 @@ export const youtubeOptions = {
   },
 };
 
-export const fetchData = async (url, options) => {
-  // Ensure that options is initialized to an empty object if it's not provided
-  options = options || {};
-  // Ensure that options.params is initialized to an empty object if it's not provided
-  options.params = options.params || {};
+export const fetchData = async (url, options = {}) => {
+  const { params = {} } = options;
 
-  const queryString = Object.keys(options.params)
-    .map(key => `${key}=${options.params[key]}`)
+  const queryString = Object.keys(params)
+    .map(key => `${key}=${params[key]}`)
     .join('&');
   const requestUrl = `${url}?${queryString}`;
 
-  const response = await fetch(requestUrl, options);
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch(requestUrl, options);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data from ${url}: ${response.status} ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    throw error; // Re-throw the error to propagate it to the caller
+  }
 };
