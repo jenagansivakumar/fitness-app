@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 
 import ExerciseCard from './ExerciseCard';
 import BodyPart from './BodyPart';
@@ -36,9 +36,13 @@ const HorizontalScrollBar = ({ data, isBodyParts, setBodyPart, bodyPart }) => (
         title={item.id || item}
         m="0 10px" 
         width="auto"
-        
+        sx={{
+          backgroundColor: '#f5f5f5', // Light grey background
+          borderRadius: '5px',
+          padding: '10px'
+        }}
       >
-        {isBodyParts ? <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} /> : <ExerciseCard exercise={item} /> }
+        {isBodyParts ? <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} /> : <ExerciseCard exercise={item} colorScheme={{ primary: '#FF2625', secondary: '#FFA9A9' }} /> }
       </Box>
     ))}
   </ScrollMenu>

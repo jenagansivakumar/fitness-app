@@ -3,10 +3,6 @@ import { Stack, Typography } from "@mui/material";
 import Icon from "../assets/icons/gym.png";
 
 const BodyPart = ({ item, setBodyPart, bodyPart }) => {
-  console.log("item: ", item);
-  console.log("setBodyPart: ", setBodyPart);
-  console.log("bodyPart: ", bodyPart);
-
   return (
     <Stack
       type="button"
@@ -17,7 +13,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
         bodyPart === item
           ? {
               borderTop: "4px solid #FF2625",
-              background: "#1a1a1a", // Dark background color
+              background: "#1a1a1a",
               borderBottomLeftRadius: "20px",
               width: "270px",
               height: "282px",
@@ -25,7 +21,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
               gap: "47px",
             }
           : {
-              background: "#1a1a1a", // Dark background color
+              background: "#1a1a1a",
               borderBottomLeftRadius: "20px",
               width: "270px",
               height: "282px",
@@ -43,10 +39,9 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
         fontSize="24px"
         fontWeight="bold"
         fontFamily="Alegreya"
-        color="#fff" // White color
+        color="#fff"
         textTransform="capitalize"
       >
-        {" "}
         {item}
       </Typography>
     </Stack>
