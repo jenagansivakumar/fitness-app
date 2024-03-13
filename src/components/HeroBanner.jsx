@@ -1,5 +1,5 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
-import HeroBannerImage from "../assets/images/banner.png";
+import HeroBannerImage from "../assets/images/banner1.png.jpg";
 
 const HeroBanner = () => {
   return (
@@ -35,6 +35,7 @@ const HeroBanner = () => {
         Explore Exercises
       </Button>
       <Typography
+        className="text-overlay"
         fontWeight="600"
         color="#ff2625"
         sx={{ opacity: 0.1, display: { lg: "block", xs: "none" } }}
