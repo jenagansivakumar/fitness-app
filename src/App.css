@@ -1,13 +1,13 @@
 body {
   font-family: 'Josefin Sans';
-  background-color: #FFFAFB;
+  background-color: #ddd; /* Changed background color to grey */
 }
 
+/* Existing CSS styles below */
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-
 }
 
 ::-webkit-scrollbar {
@@ -60,7 +60,6 @@ body {
   width: 700px;
   height: 900px;
   margin-top: -330px;
-
 }
 
 .exercise-card {
@@ -112,7 +111,6 @@ body {
     height: 300px;
   }
 
-
   .react-horizontal-scrolling-menu--scroll-container {
     width: 500px;
   }
@@ -134,7 +132,6 @@ body {
     width: 320px;
     height: 300px;
   }
-
 }
 
 @media screen and (max-width:400px) {

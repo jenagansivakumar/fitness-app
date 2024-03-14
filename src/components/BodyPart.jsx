@@ -13,7 +13,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
         bodyPart === item
           ? {
               borderTop: "4px solid #FF2625",
-              background: "#1a1a1a",
+              background: "#fff",
               borderBottomLeftRadius: "20px",
               width: "270px",
               height: "282px",
@@ -21,7 +21,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
               gap: "47px",
             }
           : {
-              background: "#1a1a1a",
+              background: "#fff",
               borderBottomLeftRadius: "20px",
               width: "270px",
               height: "282px",
@@ -39,7 +39,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
         fontSize="24px"
         fontWeight="bold"
         fontFamily="Alegreya"
-        color="#fff"
+        color="#111"
         textTransform="capitalize"
       >
         {item}

@@ -21,7 +21,7 @@ const HeroBanner = () => {
         mb="23px"
         mt="30px"
       >
-        No Nonsense <br /> Results!
+        Create The Perfect <br /> Plan!
       </Typography>
       <Typography fontSize="22px" lineHeight="35px" mb={7}>
         Check out the most efficient way to achieve your goals

@@ -23,7 +23,7 @@ export const Navbar = () => {
           src={Logo}
           alt="logo"
           style={{
-            width: "100px",
+            width: "110px",
             height: "50px",
             margin: "0 20px",
           }}
@@ -34,19 +34,22 @@ export const Navbar = () => {
           to="/"
           style={{
             textDecoration: "none",
-            color: "#bfbfbf", // Light grey color
-            borderBottom: "3px solid #fff", // White color
+            color: "red",
+            borderBottom: "3px solid #fff",
           }}
         >
           Home{" "}
         </Link>
-        <a
-          href="#exercises"
-          style={{ textDecoration: "none", color: "#bfbfbf" }} // Light grey color
+        <Link
+          to="/exercises"
+          style={{
+            textDecoration: "none",
+            color: "red",
+            borderBottom: "3px solid #fff",
+          }}
         >
-          {" "}
           Exercises
-        </a>
+        </Link>
       </Stack>
     </Stack>
   );
